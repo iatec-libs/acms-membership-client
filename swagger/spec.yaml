@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
   description: "The documentation for the ACMS Api"
-  version: "1.0.0"
+  version: "1.0.1"
   title: "Acms Api"
   termsOfService: "http://swagger.io/terms/"
   contact:
@@ -40,7 +40,7 @@ paths:
           name: "lastUpdateDate"
           description: "Filter by the date of the last update. Only filters when abbreviation is provided."
           type: string
-          format: datetime
+          format: date-time
       responses:
         200:
           description: "Success"
@@ -58,7 +58,7 @@ definitions:
     type: object
     properties:
       Id:
-        type: boolean
+        type: string
         format: uuid
       Code:
         type: integer
@@ -182,7 +182,7 @@ definitions:
         type: string
       Time:
         type: string
-        format: datetime
+        format: date-time
   #    WeekDay: "Enum(int) 6=sabado
       ScheduleType:
         type: integer

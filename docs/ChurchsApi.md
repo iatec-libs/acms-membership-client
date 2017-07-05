@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getmany"></a>
 # **GetMany**
-> List<ChurchModel> GetMany (Guid? id = null, string abbreviation = null, string lastUpdateDate = null)
+> List<ChurchModel> GetMany (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
 
 Get many churchs
 
@@ -30,10 +30,15 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: api_key
+            Configuration.Default.ApiKey.Add("app-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("app-key", "Bearer");
+
             var apiInstance = new ChurchsApi();
             var id = id_example;  // Guid? | The specific ID of a church. Do not provide when providing an abbreviation. (optional) 
             var abbreviation = abbreviation_example;  // string | Search by this abbreviation. Do not provide when providing an id. (optional) 
-            var lastUpdateDate = lastUpdateDate_example;  // string | Filter by the date of the last update. Only filters when abbreviation is provided. (optional) 
+            var lastUpdateDate = 2013-10-20T19:20:30+01:00;  // DateTime? | Filter by the date of the last update. Only filters when abbreviation is provided. (optional) 
 
             try
             {
@@ -56,7 +61,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Guid?**| The specific ID of a church. Do not provide when providing an abbreviation. | [optional] 
  **abbreviation** | **string**| Search by this abbreviation. Do not provide when providing an id. | [optional] 
- **lastUpdateDate** | **string**| Filter by the date of the last update. Only filters when abbreviation is provided. | [optional] 
+ **lastUpdateDate** | **DateTime?**| Filter by the date of the last update. Only filters when abbreviation is provided. | [optional] 
 
 ### Return type
 
@@ -64,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 

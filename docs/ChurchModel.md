@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **bool?** |  | [optional] 
+**Id** | **Guid?** |  | [optional] 
 **Code** | **int?** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **ParentEntity** | [**ParentEntityModel**](ParentEntityModel.md) |  | [optional] 

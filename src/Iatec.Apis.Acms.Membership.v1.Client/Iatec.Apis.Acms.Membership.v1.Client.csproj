@@ -4,7 +4,7 @@ Acms Api
 
 The documentation for the ACMS Api
 
-OpenAPI spec version: 1.0.0
+OpenAPI spec version: 1.0.1
 Contact: apiteam@swagger.io
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
