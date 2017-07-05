@@ -14,6 +14,8 @@ basePath: "/public/api/Membership/V1"
 tags:
   - name: "churchs"
     description: "Everything related to churchs"
+security:
+  - api_key: []
 schemes:
   - "https"
 paths:
@@ -48,9 +50,9 @@ paths:
               $ref: '#/definitions/Church'
 securityDefinitions:
   api_key:
-    type: "apiKey"
+    type: apiKey
     name: "app-key"
-    in: "header"
+    in: header
 definitions:
   Church:
     type: object
