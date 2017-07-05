@@ -49,7 +49,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="Features">Features.</param>
         /// <param name="ServiceTimes">ServiceTimes.</param>
         /// <param name="StreetAddress">StreetAddress.</param>
-        public ChurchModel(Guid? Id = default(Guid?), int? Code = default(int?), string Name = default(string), ParentEntityModel ParentEntity = default(ParentEntityModel), int? ChurchType = default(int?), CultureModel Culture = default(CultureModel), bool? DistrictId = default(bool?), int? DistrictCode = default(int?), bool? RegionId = default(bool?), int? RegionCode = default(int?), AddressModel MailingAddress = default(AddressModel), bool? Active = default(bool?), int? MembersAmount = default(int?), List<PastorModel> Pastors = default(List<PastorModel>), List<FeatureModel> Features = default(List<FeatureModel>), List<ServiceTimeModel> ServiceTimes = default(List<ServiceTimeModel>), AddressModel StreetAddress = default(AddressModel))
+        public ChurchModel(Guid? Id = default(Guid?), int? Code = default(int?), string Name = default(string), ParentEntityModel ParentEntity = default(ParentEntityModel), int? ChurchType = default(int?), CultureModel Culture = default(CultureModel), Guid? DistrictId = default(Guid?), int? DistrictCode = default(int?), Guid? RegionId = default(Guid?), int? RegionCode = default(int?), AddressModel MailingAddress = default(AddressModel), bool? Active = default(bool?), int? MembersAmount = default(int?), List<PastorModel> Pastors = default(List<PastorModel>), List<FeatureModel> Features = default(List<FeatureModel>), List<ServiceTimeModel> ServiceTimes = default(List<ServiceTimeModel>), AddressModel StreetAddress = default(AddressModel))
         {
             this.Id = Id;
             this.Code = Code;
@@ -104,7 +104,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// Gets or Sets DistrictId
         /// </summary>
         [DataMember(Name="DistrictId", EmitDefaultValue=false)]
-        public bool? DistrictId { get; set; }
+        public Guid? DistrictId { get; set; }
         /// <summary>
         /// Gets or Sets DistrictCode
         /// </summary>
@@ -114,7 +114,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// Gets or Sets RegionId
         /// </summary>
         [DataMember(Name="RegionId", EmitDefaultValue=false)]
-        public bool? RegionId { get; set; }
+        public Guid? RegionId { get; set; }
         /// <summary>
         /// Gets or Sets RegionCode
         /// </summary>

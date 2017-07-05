@@ -36,19 +36,15 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="Code">Code.</param>
         /// <param name="Name">Name.</param>
         /// <param name="PhoneticName">PhoneticName.</param>
-        /// <param name="LatitudeNumber">LatitudeNumber.</param>
-        /// <param name="LongitudeNumber">LongitudeNumber.</param>
         /// <param name="FormattedName">FormattedName.</param>
         /// <param name="State">State.</param>
         /// <param name="Country">Country.</param>
-        public CityModel(string Id = default(string), string Code = default(string), string Name = default(string), string PhoneticName = default(string), int? LatitudeNumber = default(int?), int? LongitudeNumber = default(int?), string FormattedName = default(string), StateModel State = default(StateModel), CountryModel Country = default(CountryModel))
+        public CityModel(string Id = default(string), string Code = default(string), string Name = default(string), string PhoneticName = default(string), string FormattedName = default(string), StateModel State = default(StateModel), CountryModel Country = default(CountryModel))
         {
             this.Id = Id;
             this.Code = Code;
             this.Name = Name;
             this.PhoneticName = PhoneticName;
-            this.LatitudeNumber = LatitudeNumber;
-            this.LongitudeNumber = LongitudeNumber;
             this.FormattedName = FormattedName;
             this.State = State;
             this.Country = Country;
@@ -74,16 +70,6 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// </summary>
         [DataMember(Name="PhoneticName", EmitDefaultValue=false)]
         public string PhoneticName { get; set; }
-        /// <summary>
-        /// Gets or Sets LatitudeNumber
-        /// </summary>
-        [DataMember(Name="LatitudeNumber", EmitDefaultValue=false)]
-        public int? LatitudeNumber { get; set; }
-        /// <summary>
-        /// Gets or Sets LongitudeNumber
-        /// </summary>
-        [DataMember(Name="LongitudeNumber", EmitDefaultValue=false)]
-        public int? LongitudeNumber { get; set; }
         /// <summary>
         /// Gets or Sets FormattedName
         /// </summary>
@@ -111,8 +97,6 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PhoneticName: ").Append(PhoneticName).Append("\n");
-            sb.Append("  LatitudeNumber: ").Append(LatitudeNumber).Append("\n");
-            sb.Append("  LongitudeNumber: ").Append(LongitudeNumber).Append("\n");
             sb.Append("  FormattedName: ").Append(FormattedName).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
@@ -173,16 +157,6 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     this.PhoneticName.Equals(other.PhoneticName)
                 ) && 
                 (
-                    this.LatitudeNumber == other.LatitudeNumber ||
-                    this.LatitudeNumber != null &&
-                    this.LatitudeNumber.Equals(other.LatitudeNumber)
-                ) && 
-                (
-                    this.LongitudeNumber == other.LongitudeNumber ||
-                    this.LongitudeNumber != null &&
-                    this.LongitudeNumber.Equals(other.LongitudeNumber)
-                ) && 
-                (
                     this.FormattedName == other.FormattedName ||
                     this.FormattedName != null &&
                     this.FormattedName.Equals(other.FormattedName)
@@ -218,10 +192,6 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.PhoneticName != null)
                     hash = hash * 59 + this.PhoneticName.GetHashCode();
-                if (this.LatitudeNumber != null)
-                    hash = hash * 59 + this.LatitudeNumber.GetHashCode();
-                if (this.LongitudeNumber != null)
-                    hash = hash * 59 + this.LongitudeNumber.GetHashCode();
                 if (this.FormattedName != null)
                     hash = hash * 59 + this.FormattedName.GetHashCode();
                 if (this.State != null)

@@ -34,7 +34,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Url">Url.</param>
-        public PictureModel(bool? Id = default(bool?), string Url = default(string))
+        public PictureModel(Guid? Id = default(Guid?), string Url = default(string))
         {
             this.Id = Id;
             this.Url = Url;
@@ -44,7 +44,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="Id", EmitDefaultValue=false)]
-        public bool? Id { get; set; }
+        public Guid? Id { get; set; }
         /// <summary>
         /// Gets or Sets Url
         /// </summary>

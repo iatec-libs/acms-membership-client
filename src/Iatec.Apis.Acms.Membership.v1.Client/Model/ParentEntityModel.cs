@@ -35,7 +35,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="Name">Name.</param>
         /// <param name="Abbreviation">Abbreviation.</param>
         /// <param name="Id">Id.</param>
-        public ParentEntityModel(string Name = default(string), string Abbreviation = default(string), bool? Id = default(bool?))
+        public ParentEntityModel(string Name = default(string), string Abbreviation = default(string), Guid? Id = default(Guid?))
         {
             this.Name = Name;
             this.Abbreviation = Abbreviation;
@@ -56,7 +56,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="Id", EmitDefaultValue=false)]
-        public bool? Id { get; set; }
+        public Guid? Id { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

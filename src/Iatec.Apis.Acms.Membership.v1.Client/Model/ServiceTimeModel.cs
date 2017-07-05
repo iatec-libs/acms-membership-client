@@ -36,7 +36,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="Name">Name.</param>
         /// <param name="Time">Time.</param>
         /// <param name="ScheduleType">ScheduleType.</param>
-        public ServiceTimeModel(bool? Id = default(bool?), string Name = default(string), DateTime? Time = default(DateTime?), int? ScheduleType = default(int?))
+        public ServiceTimeModel(Guid? Id = default(Guid?), string Name = default(string), DateTime? Time = default(DateTime?), int? ScheduleType = default(int?))
         {
             this.Id = Id;
             this.Name = Name;
@@ -48,7 +48,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="Id", EmitDefaultValue=false)]
-        public bool? Id { get; set; }
+        public Guid? Id { get; set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>

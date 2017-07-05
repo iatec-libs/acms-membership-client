@@ -41,7 +41,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="MobilePhone">MobilePhone.</param>
         /// <param name="Email">Email.</param>
         /// <param name="IsMainPastor">IsMainPastor.</param>
-        public PastorModel(bool? Id = default(bool?), string Name = default(string), string LastName = default(string), string FullName = default(string), PictureModel MainPicture = default(PictureModel), string HomePhone = default(string), string MobilePhone = default(string), string Email = default(string), bool? IsMainPastor = default(bool?))
+        public PastorModel(Guid? Id = default(Guid?), string Name = default(string), string LastName = default(string), string FullName = default(string), PictureModel MainPicture = default(PictureModel), string HomePhone = default(string), string MobilePhone = default(string), string Email = default(string), bool? IsMainPastor = default(bool?))
         {
             this.Id = Id;
             this.Name = Name;
@@ -58,7 +58,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="Id", EmitDefaultValue=false)]
-        public bool? Id { get; set; }
+        public Guid? Id { get; set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>

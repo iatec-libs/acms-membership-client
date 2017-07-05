@@ -71,12 +71,12 @@ definitions:
       Culture:
         $ref: '#/definitions/Culture'
       DistrictId:
-        type: boolean
+        type: string
         format: uuid
       DistrictCode:
         type: integer
       RegionId:
-        type: boolean
+        type: string
         format: uuid
       RegionCode:
         type: integer
@@ -108,13 +108,13 @@ definitions:
       Abbreviation:
         type: string
       Id:
-        type: boolean
+        type: string
         format: uuid
   Culture:
     type: object
     properties:
       Id:
-        type: boolean
+        type: string
         format: uuid
       Name:
         type: string
@@ -128,14 +128,14 @@ definitions:
       PostalCode:
         type: string
       LatitudeNumber:
-        type: integer
+        type: double
       LongitudeNumber:
-        type: integer
+        type: double
   Pastor:
     type: object
     properties:
       Id:
-        type: boolean
+        type: string
         format: uuid
       Name:
         type: string
@@ -157,7 +157,7 @@ definitions:
     type: object
     properties:
       Id:
-        type: boolean
+        type: string
         format: uuid
       Url:
         type: string
@@ -166,7 +166,7 @@ definitions:
     type: object
     properties:
       Id:
-        type: boolean
+        type: string
         format: uuid
       Name:
         type: string
@@ -176,7 +176,7 @@ definitions:
     type: object
     properties:
       Id:
-        type: boolean
+        type: string
         format: uuid
       Name:
         type: string
@@ -198,9 +198,9 @@ definitions:
       PhoneticName:
         type: string
       LatitudeNumber:
-        type: integer
+        type: double
       LongitudeNumber:
-        type: integer
+        type: double
       FormattedName:
         type: string
       State:
@@ -217,9 +217,9 @@ definitions:
       Name:
         type: string
       LatitudeNumber:
-        type: integer
+        type: double
       LongitudeNumber:
-        type: integer
+        type: double
       FormattedName:
         type: string
       Abbreviation:
@@ -234,9 +234,9 @@ definitions:
       Name:
         type: string
       LatitudeNumber:
-        type: integer
+        type: double
       LongitudeNumber:
-        type: integer
+        type: double
       FormattedName:
         type: string
       Abbreviation:

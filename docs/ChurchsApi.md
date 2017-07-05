@@ -4,12 +4,12 @@ All URIs are relative to *https://sad-us-fm-1.acms.live.ws.acmsnet.org/public/ap
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetMany**](ChurchsApi.md#getmany) | **GET** /Church | Get many churchs
+[**GetManyChurches**](ChurchsApi.md#getmanychurches) | **GET** /Church | Get many churchs
 
 
-<a name="getmany"></a>
-# **GetMany**
-> List<ChurchModel> GetMany (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
+<a name="getmanychurches"></a>
+# **GetManyChurches**
+> List<ChurchModel> GetManyChurches (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
 
 Get many churchs
 
@@ -25,7 +25,7 @@ using Iatec.Apis.Acms.Membership.v1.Client.Model;
 
 namespace Example
 {
-    public class GetManyExample
+    public class GetManyChurchesExample
     {
         public void main()
         {
@@ -43,12 +43,12 @@ namespace Example
             try
             {
                 // Get many churchs
-                List&lt;ChurchModel&gt; result = apiInstance.GetMany(id, abbreviation, lastUpdateDate);
+                List&lt;ChurchModel&gt; result = apiInstance.GetManyChurches(id, abbreviation, lastUpdateDate);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ChurchsApi.GetMany: " + e.Message );
+                Debug.Print("Exception when calling ChurchsApi.GetManyChurches: " + e.Message );
             }
         }
     }

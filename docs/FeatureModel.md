@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **bool?** |  | [optional] 
+**Id** | **Guid?** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **OnlyEntityUpdate** | **bool?** |  | [optional] 
 

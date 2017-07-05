@@ -35,7 +35,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
         /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>List&lt;ChurchModel&gt;</returns>
-        List<ChurchModel> GetMany (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null);
+        List<ChurchModel> GetManyChurches (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null);
 
         /// <summary>
         /// Get many churchs
@@ -48,7 +48,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
         /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>ApiResponse of List&lt;ChurchModel&gt;</returns>
-        ApiResponse<List<ChurchModel>> GetManyWithHttpInfo (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null);
+        ApiResponse<List<ChurchModel>> GetManyChurchesWithHttpInfo (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -62,7 +62,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
         /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>Task of List&lt;ChurchModel&gt;</returns>
-        System.Threading.Tasks.Task<List<ChurchModel>> GetManyAsync (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null);
+        System.Threading.Tasks.Task<List<ChurchModel>> GetManyChurchesAsync (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null);
 
         /// <summary>
         /// Get many churchs
@@ -75,7 +75,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
         /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;ChurchModel&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ChurchModel>>> GetManyAsyncWithHttpInfo (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null);
+        System.Threading.Tasks.Task<ApiResponse<List<ChurchModel>>> GetManyChurchesAsyncWithHttpInfo (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null);
         #endregion Asynchronous Operations
     }
 
@@ -196,9 +196,9 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
         /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>List&lt;ChurchModel&gt;</returns>
-        public List<ChurchModel> GetMany (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
+        public List<ChurchModel> GetManyChurches (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
         {
-             ApiResponse<List<ChurchModel>> localVarResponse = GetManyWithHttpInfo(id, abbreviation, lastUpdateDate);
+             ApiResponse<List<ChurchModel>> localVarResponse = GetManyChurchesWithHttpInfo(id, abbreviation, lastUpdateDate);
              return localVarResponse.Data;
         }
 
@@ -210,7 +210,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
         /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>ApiResponse of List&lt;ChurchModel&gt;</returns>
-        public ApiResponse< List<ChurchModel> > GetManyWithHttpInfo (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
+        public ApiResponse< List<ChurchModel> > GetManyChurchesWithHttpInfo (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
         {
 
             var localVarPath = "/Church";
@@ -256,7 +256,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetMany", localVarResponse);
+                Exception exception = ExceptionFactory("GetManyChurches", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -274,9 +274,9 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
         /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>Task of List&lt;ChurchModel&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ChurchModel>> GetManyAsync (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
+        public async System.Threading.Tasks.Task<List<ChurchModel>> GetManyChurchesAsync (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
         {
-             ApiResponse<List<ChurchModel>> localVarResponse = await GetManyAsyncWithHttpInfo(id, abbreviation, lastUpdateDate);
+             ApiResponse<List<ChurchModel>> localVarResponse = await GetManyChurchesAsyncWithHttpInfo(id, abbreviation, lastUpdateDate);
              return localVarResponse.Data;
 
         }
@@ -289,7 +289,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
         /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;ChurchModel&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<ChurchModel>>> GetManyAsyncWithHttpInfo (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<ChurchModel>>> GetManyChurchesAsyncWithHttpInfo (Guid? id = null, string abbreviation = null, DateTime? lastUpdateDate = null)
         {
 
             var localVarPath = "/Church";
@@ -334,7 +334,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetMany", localVarResponse);
+                Exception exception = ExceptionFactory("GetManyChurches", localVarResponse);
                 if (exception != null) throw exception;
             }
 

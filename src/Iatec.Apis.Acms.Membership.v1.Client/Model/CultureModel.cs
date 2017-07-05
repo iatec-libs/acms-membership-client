@@ -34,7 +34,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
-        public CultureModel(bool? Id = default(bool?), string Name = default(string))
+        public CultureModel(Guid? Id = default(Guid?), string Name = default(string))
         {
             this.Id = Id;
             this.Name = Name;
@@ -44,7 +44,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="Id", EmitDefaultValue=false)]
-        public bool? Id { get; set; }
+        public Guid? Id { get; set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
