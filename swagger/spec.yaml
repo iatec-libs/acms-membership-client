@@ -24,7 +24,7 @@ paths:
       tags:
         - churchs
       summary: "Get many churchs"
-      operationId: getMany
+      operationId: getManyChurches
       description: "At least the id or the abbreviation must be provided, and both parameters cannot work together."
       parameters:
         - in: query
