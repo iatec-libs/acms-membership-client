@@ -28,12 +28,12 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// Get many churchs
         /// </summary>
         /// <remarks>
-        /// 
+        /// At least the id or the abbreviation must be provided, and both parameters cannot work together.
         /// </remarks>
         /// <exception cref="Iatec.Apis.Acms.Membership.v1.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">The specific ID of a church (optional)</param>
-        /// <param name="abbreviation">Search by this abbreviation (optional)</param>
-        /// <param name="lastUpdateDate">Filter by the date of the last update (optional)</param>
+        /// <param name="id">The specific ID of a church. Do not provide when providing an abbreviation. (optional)</param>
+        /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
+        /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>List&lt;ChurchModel&gt;</returns>
         List<ChurchModel> GetMany (Guid? id = null, string abbreviation = null, string lastUpdateDate = null);
 
@@ -41,12 +41,12 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// Get many churchs
         /// </summary>
         /// <remarks>
-        /// 
+        /// At least the id or the abbreviation must be provided, and both parameters cannot work together.
         /// </remarks>
         /// <exception cref="Iatec.Apis.Acms.Membership.v1.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">The specific ID of a church (optional)</param>
-        /// <param name="abbreviation">Search by this abbreviation (optional)</param>
-        /// <param name="lastUpdateDate">Filter by the date of the last update (optional)</param>
+        /// <param name="id">The specific ID of a church. Do not provide when providing an abbreviation. (optional)</param>
+        /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
+        /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>ApiResponse of List&lt;ChurchModel&gt;</returns>
         ApiResponse<List<ChurchModel>> GetManyWithHttpInfo (Guid? id = null, string abbreviation = null, string lastUpdateDate = null);
         #endregion Synchronous Operations
@@ -55,12 +55,12 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// Get many churchs
         /// </summary>
         /// <remarks>
-        /// 
+        /// At least the id or the abbreviation must be provided, and both parameters cannot work together.
         /// </remarks>
         /// <exception cref="Iatec.Apis.Acms.Membership.v1.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">The specific ID of a church (optional)</param>
-        /// <param name="abbreviation">Search by this abbreviation (optional)</param>
-        /// <param name="lastUpdateDate">Filter by the date of the last update (optional)</param>
+        /// <param name="id">The specific ID of a church. Do not provide when providing an abbreviation. (optional)</param>
+        /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
+        /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>Task of List&lt;ChurchModel&gt;</returns>
         System.Threading.Tasks.Task<List<ChurchModel>> GetManyAsync (Guid? id = null, string abbreviation = null, string lastUpdateDate = null);
 
@@ -68,12 +68,12 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         /// Get many churchs
         /// </summary>
         /// <remarks>
-        /// 
+        /// At least the id or the abbreviation must be provided, and both parameters cannot work together.
         /// </remarks>
         /// <exception cref="Iatec.Apis.Acms.Membership.v1.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">The specific ID of a church (optional)</param>
-        /// <param name="abbreviation">Search by this abbreviation (optional)</param>
-        /// <param name="lastUpdateDate">Filter by the date of the last update (optional)</param>
+        /// <param name="id">The specific ID of a church. Do not provide when providing an abbreviation. (optional)</param>
+        /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
+        /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;ChurchModel&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<ChurchModel>>> GetManyAsyncWithHttpInfo (Guid? id = null, string abbreviation = null, string lastUpdateDate = null);
         #endregion Asynchronous Operations
@@ -189,12 +189,12 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         }
 
         /// <summary>
-        /// Get many churchs 
+        /// Get many churchs At least the id or the abbreviation must be provided, and both parameters cannot work together.
         /// </summary>
         /// <exception cref="Iatec.Apis.Acms.Membership.v1.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">The specific ID of a church (optional)</param>
-        /// <param name="abbreviation">Search by this abbreviation (optional)</param>
-        /// <param name="lastUpdateDate">Filter by the date of the last update (optional)</param>
+        /// <param name="id">The specific ID of a church. Do not provide when providing an abbreviation. (optional)</param>
+        /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
+        /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>List&lt;ChurchModel&gt;</returns>
         public List<ChurchModel> GetMany (Guid? id = null, string abbreviation = null, string lastUpdateDate = null)
         {
@@ -203,17 +203,17 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         }
 
         /// <summary>
-        /// Get many churchs 
+        /// Get many churchs At least the id or the abbreviation must be provided, and both parameters cannot work together.
         /// </summary>
         /// <exception cref="Iatec.Apis.Acms.Membership.v1.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">The specific ID of a church (optional)</param>
-        /// <param name="abbreviation">Search by this abbreviation (optional)</param>
-        /// <param name="lastUpdateDate">Filter by the date of the last update (optional)</param>
+        /// <param name="id">The specific ID of a church. Do not provide when providing an abbreviation. (optional)</param>
+        /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
+        /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>ApiResponse of List&lt;ChurchModel&gt;</returns>
         public ApiResponse< List<ChurchModel> > GetManyWithHttpInfo (Guid? id = null, string abbreviation = null, string lastUpdateDate = null)
         {
 
-            var localVarPath = "/arms";
+            var localVarPath = "/Church";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -261,12 +261,12 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         }
 
         /// <summary>
-        /// Get many churchs 
+        /// Get many churchs At least the id or the abbreviation must be provided, and both parameters cannot work together.
         /// </summary>
         /// <exception cref="Iatec.Apis.Acms.Membership.v1.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">The specific ID of a church (optional)</param>
-        /// <param name="abbreviation">Search by this abbreviation (optional)</param>
-        /// <param name="lastUpdateDate">Filter by the date of the last update (optional)</param>
+        /// <param name="id">The specific ID of a church. Do not provide when providing an abbreviation. (optional)</param>
+        /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
+        /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>Task of List&lt;ChurchModel&gt;</returns>
         public async System.Threading.Tasks.Task<List<ChurchModel>> GetManyAsync (Guid? id = null, string abbreviation = null, string lastUpdateDate = null)
         {
@@ -276,17 +276,17 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Api
         }
 
         /// <summary>
-        /// Get many churchs 
+        /// Get many churchs At least the id or the abbreviation must be provided, and both parameters cannot work together.
         /// </summary>
         /// <exception cref="Iatec.Apis.Acms.Membership.v1.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">The specific ID of a church (optional)</param>
-        /// <param name="abbreviation">Search by this abbreviation (optional)</param>
-        /// <param name="lastUpdateDate">Filter by the date of the last update (optional)</param>
+        /// <param name="id">The specific ID of a church. Do not provide when providing an abbreviation. (optional)</param>
+        /// <param name="abbreviation">Search by this abbreviation. Do not provide when providing an id. (optional)</param>
+        /// <param name="lastUpdateDate">Filter by the date of the last update. Only filters when abbreviation is provided. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;ChurchModel&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<ChurchModel>>> GetManyAsyncWithHttpInfo (Guid? id = null, string abbreviation = null, string lastUpdateDate = null)
         {
 
-            var localVarPath = "/arms";
+            var localVarPath = "/Church";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

@@ -4,7 +4,7 @@ All URIs are relative to *https://sad-us-fm-1.acms.live.ws.acmsnet.org/public/ap
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetMany**](ChurchsApi.md#getmany) | **GET** /arms | Get many churchs
+[**GetMany**](ChurchsApi.md#getmany) | **GET** /Church | Get many churchs
 
 
 <a name="getmany"></a>
@@ -12,6 +12,8 @@ Method | HTTP request | Description
 > List<ChurchModel> GetMany (Guid? id = null, string abbreviation = null, string lastUpdateDate = null)
 
 Get many churchs
+
+At least the id or the abbreviation must be provided, and both parameters cannot work together.
 
 ### Example
 ```csharp
@@ -29,9 +31,9 @@ namespace Example
         {
             
             var apiInstance = new ChurchsApi();
-            var id = id_example;  // Guid? | The specific ID of a church (optional) 
-            var abbreviation = abbreviation_example;  // string | Search by this abbreviation (optional) 
-            var lastUpdateDate = lastUpdateDate_example;  // string | Filter by the date of the last update (optional) 
+            var id = id_example;  // Guid? | The specific ID of a church. Do not provide when providing an abbreviation. (optional) 
+            var abbreviation = abbreviation_example;  // string | Search by this abbreviation. Do not provide when providing an id. (optional) 
+            var lastUpdateDate = lastUpdateDate_example;  // string | Filter by the date of the last update. Only filters when abbreviation is provided. (optional) 
 
             try
             {
@@ -52,9 +54,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Guid?**| The specific ID of a church | [optional] 
- **abbreviation** | **string**| Search by this abbreviation | [optional] 
- **lastUpdateDate** | **string**| Filter by the date of the last update | [optional] 
+ **id** | **Guid?**| The specific ID of a church. Do not provide when providing an abbreviation. | [optional] 
+ **abbreviation** | **string**| Search by this abbreviation. Do not provide when providing an id. | [optional] 
+ **lastUpdateDate** | **string**| Filter by the date of the last update. Only filters when abbreviation is provided. | [optional] 
 
 ### Return type
 

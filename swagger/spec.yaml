@@ -17,25 +17,26 @@ tags:
 schemes:
   - "https"
 paths:
-  /arms:
+  /Church:
     get:
       tags:
         - churchs
       summary: "Get many churchs"
       operationId: getMany
+      description: "At least the id or the abbreviation must be provided, and both parameters cannot work together."
       parameters:
         - in: query
           name: "id"
-          description: "The specific ID of a church"
+          description: "The specific ID of a church. Do not provide when providing an abbreviation."
           type: string
           format: uuid
         - in: query
           name: "abbreviation"
-          description: "Search by this abbreviation"
+          description: "Search by this abbreviation. Do not provide when providing an id."
           type: string
         - in: query
           name: "lastUpdateDate"
-          description: "Filter by the date of the last update"
+          description: "Filter by the date of the last update. Only filters when abbreviation is provided."
           type: string
           format: datetime
       responses:
