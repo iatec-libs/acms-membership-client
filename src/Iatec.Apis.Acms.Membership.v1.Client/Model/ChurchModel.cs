@@ -36,6 +36,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="Code">Code.</param>
         /// <param name="Name">Name.</param>
         /// <param name="ParentEntity">ParentEntity.</param>
+        /// <param name="MainPicture">MainPicture.</param>
         /// <param name="ChurchType">ChurchType.</param>
         /// <param name="Culture">Culture.</param>
         /// <param name="DistrictId">DistrictId.</param>
@@ -49,12 +50,13 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="Features">Features.</param>
         /// <param name="ServiceTimes">ServiceTimes.</param>
         /// <param name="StreetAddress">StreetAddress.</param>
-        public ChurchModel(Guid? Id = default(Guid?), int? Code = default(int?), string Name = default(string), ParentEntityModel ParentEntity = default(ParentEntityModel), int? ChurchType = default(int?), CultureModel Culture = default(CultureModel), Guid? DistrictId = default(Guid?), int? DistrictCode = default(int?), Guid? RegionId = default(Guid?), int? RegionCode = default(int?), AddressModel MailingAddress = default(AddressModel), bool? Active = default(bool?), int? MembersAmount = default(int?), List<PastorModel> Pastors = default(List<PastorModel>), List<FeatureModel> Features = default(List<FeatureModel>), List<ServiceTimeModel> ServiceTimes = default(List<ServiceTimeModel>), AddressModel StreetAddress = default(AddressModel))
+        public ChurchModel(Guid? Id = default(Guid?), int? Code = default(int?), string Name = default(string), ParentEntityModel ParentEntity = default(ParentEntityModel), PictureModel MainPicture = default(PictureModel), int? ChurchType = default(int?), CultureModel Culture = default(CultureModel), Guid? DistrictId = default(Guid?), int? DistrictCode = default(int?), Guid? RegionId = default(Guid?), int? RegionCode = default(int?), AddressModel MailingAddress = default(AddressModel), bool? Active = default(bool?), int? MembersAmount = default(int?), List<PastorModel> Pastors = default(List<PastorModel>), List<FeatureModel> Features = default(List<FeatureModel>), List<ServiceTimeModel> ServiceTimes = default(List<ServiceTimeModel>), AddressModel StreetAddress = default(AddressModel))
         {
             this.Id = Id;
             this.Code = Code;
             this.Name = Name;
             this.ParentEntity = ParentEntity;
+            this.MainPicture = MainPicture;
             this.ChurchType = ChurchType;
             this.Culture = Culture;
             this.DistrictId = DistrictId;
@@ -90,6 +92,11 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// </summary>
         [DataMember(Name="ParentEntity", EmitDefaultValue=false)]
         public ParentEntityModel ParentEntity { get; set; }
+        /// <summary>
+        /// Gets or Sets MainPicture
+        /// </summary>
+        [DataMember(Name="MainPicture", EmitDefaultValue=false)]
+        public PictureModel MainPicture { get; set; }
         /// <summary>
         /// Gets or Sets ChurchType
         /// </summary>
@@ -167,6 +174,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ParentEntity: ").Append(ParentEntity).Append("\n");
+            sb.Append("  MainPicture: ").Append(MainPicture).Append("\n");
             sb.Append("  ChurchType: ").Append(ChurchType).Append("\n");
             sb.Append("  Culture: ").Append(Culture).Append("\n");
             sb.Append("  DistrictId: ").Append(DistrictId).Append("\n");
@@ -235,6 +243,11 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     this.ParentEntity == other.ParentEntity ||
                     this.ParentEntity != null &&
                     this.ParentEntity.Equals(other.ParentEntity)
+                ) && 
+                (
+                    this.MainPicture == other.MainPicture ||
+                    this.MainPicture != null &&
+                    this.MainPicture.Equals(other.MainPicture)
                 ) && 
                 (
                     this.ChurchType == other.ChurchType ||
@@ -322,6 +335,8 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.ParentEntity != null)
                     hash = hash * 59 + this.ParentEntity.GetHashCode();
+                if (this.MainPicture != null)
+                    hash = hash * 59 + this.MainPicture.GetHashCode();
                 if (this.ChurchType != null)
                     hash = hash * 59 + this.ChurchType.GetHashCode();
                 if (this.Culture != null)
