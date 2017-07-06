@@ -66,6 +66,8 @@ definitions:
         type: string
       ParentEntity:
         $ref: '#/definitions/ParentEntity'
+      MainPicture:
+        $ref: '#/definitions/Picture'
       ChurchType:
         type: integer
       Culture:
