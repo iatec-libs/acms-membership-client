@@ -133,6 +133,8 @@ definitions:
       LongitudeNumber:
         type: number
         format: double
+      City:
+        $ref: '#/definitions/City'
   Pastor:
     type: object
     properties:
@@ -185,7 +187,10 @@ definitions:
       Time:
         type: string
         format: date-time
-  #    WeekDay: "Enum(int) 6=sabado
+      WeekDay:
+        type: int
+        enum: [0 1 2 3 4 5 6]
+        description: "0=Sunday. 6=Saturday."
       ScheduleType:
         type: integer
   City:
