@@ -128,9 +128,11 @@ definitions:
       PostalCode:
         type: string
       LatitudeNumber:
-        type: double
+        type: number
+        format: double
       LongitudeNumber:
-        type: double
+        type: number
+        format: double
   Pastor:
     type: object
     properties:
@@ -198,9 +200,11 @@ definitions:
       PhoneticName:
         type: string
       LatitudeNumber:
-        type: double
+        type: number
+        format: double
       LongitudeNumber:
-        type: double
+        type: number
+        format: double
       FormattedName:
         type: string
       State:
@@ -217,9 +221,11 @@ definitions:
       Name:
         type: string
       LatitudeNumber:
-        type: double
+        type: number
+        format: double
       LongitudeNumber:
-        type: double
+        type: number
+        format: double
       FormattedName:
         type: string
       Abbreviation:
@@ -234,9 +240,11 @@ definitions:
       Name:
         type: string
       LatitudeNumber:
-        type: double
+        type: number
+        format: double
       LongitudeNumber:
-        type: double
+        type: number
+        format: double
       FormattedName:
         type: string
       Abbreviation:
