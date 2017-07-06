@@ -35,13 +35,17 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="Id">Id.</param>
         /// <param name="Code">Code.</param>
         /// <param name="Name">Name.</param>
+        /// <param name="LatitudeNumber">LatitudeNumber.</param>
+        /// <param name="LongitudeNumber">LongitudeNumber.</param>
         /// <param name="FormattedName">FormattedName.</param>
         /// <param name="Abbreviation">Abbreviation.</param>
-        public StateModel(string Id = default(string), string Code = default(string), string Name = default(string), string FormattedName = default(string), string Abbreviation = default(string))
+        public StateModel(string Id = default(string), string Code = default(string), string Name = default(string), double? LatitudeNumber = default(double?), double? LongitudeNumber = default(double?), string FormattedName = default(string), string Abbreviation = default(string))
         {
             this.Id = Id;
             this.Code = Code;
             this.Name = Name;
+            this.LatitudeNumber = LatitudeNumber;
+            this.LongitudeNumber = LongitudeNumber;
             this.FormattedName = FormattedName;
             this.Abbreviation = Abbreviation;
         }
@@ -61,6 +65,16 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// </summary>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        /// <summary>
+        /// Gets or Sets LatitudeNumber
+        /// </summary>
+        [DataMember(Name="LatitudeNumber", EmitDefaultValue=false)]
+        public double? LatitudeNumber { get; set; }
+        /// <summary>
+        /// Gets or Sets LongitudeNumber
+        /// </summary>
+        [DataMember(Name="LongitudeNumber", EmitDefaultValue=false)]
+        public double? LongitudeNumber { get; set; }
         /// <summary>
         /// Gets or Sets FormattedName
         /// </summary>
@@ -82,6 +96,8 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  LatitudeNumber: ").Append(LatitudeNumber).Append("\n");
+            sb.Append("  LongitudeNumber: ").Append(LongitudeNumber).Append("\n");
             sb.Append("  FormattedName: ").Append(FormattedName).Append("\n");
             sb.Append("  Abbreviation: ").Append(Abbreviation).Append("\n");
             sb.Append("}\n");
@@ -136,6 +152,16 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     this.Name.Equals(other.Name)
                 ) && 
                 (
+                    this.LatitudeNumber == other.LatitudeNumber ||
+                    this.LatitudeNumber != null &&
+                    this.LatitudeNumber.Equals(other.LatitudeNumber)
+                ) && 
+                (
+                    this.LongitudeNumber == other.LongitudeNumber ||
+                    this.LongitudeNumber != null &&
+                    this.LongitudeNumber.Equals(other.LongitudeNumber)
+                ) && 
+                (
                     this.FormattedName == other.FormattedName ||
                     this.FormattedName != null &&
                     this.FormattedName.Equals(other.FormattedName)
@@ -164,6 +190,10 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     hash = hash * 59 + this.Code.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                if (this.LatitudeNumber != null)
+                    hash = hash * 59 + this.LatitudeNumber.GetHashCode();
+                if (this.LongitudeNumber != null)
+                    hash = hash * 59 + this.LongitudeNumber.GetHashCode();
                 if (this.FormattedName != null)
                     hash = hash * 59 + this.FormattedName.GetHashCode();
                 if (this.Abbreviation != null)

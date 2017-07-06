@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **Code** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **PhoneticName** | **string** |  | [optional] 
+**LatitudeNumber** | **double?** |  | [optional] 
+**LongitudeNumber** | **double?** |  | [optional] 
 **FormattedName** | **string** |  | [optional] 
 **State** | [**StateModel**](StateModel.md) |  | [optional] 
 **Country** | [**CountryModel**](CountryModel.md) |  | [optional] 

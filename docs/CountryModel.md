@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **Id** | **string** |  | [optional] 
 **Code** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
+**LatitudeNumber** | **double?** |  | [optional] 
+**LongitudeNumber** | **double?** |  | [optional] 
 **FormattedName** | **string** |  | [optional] 
 **Abbreviation** | **string** |  | [optional] 
 

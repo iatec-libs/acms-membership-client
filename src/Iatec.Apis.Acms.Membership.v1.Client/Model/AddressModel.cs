@@ -35,11 +35,15 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="Description">Description.</param>
         /// <param name="Complement">Complement.</param>
         /// <param name="PostalCode">PostalCode.</param>
-        public AddressModel(string Description = default(string), string Complement = default(string), string PostalCode = default(string))
+        /// <param name="LatitudeNumber">LatitudeNumber.</param>
+        /// <param name="LongitudeNumber">LongitudeNumber.</param>
+        public AddressModel(string Description = default(string), string Complement = default(string), string PostalCode = default(string), double? LatitudeNumber = default(double?), double? LongitudeNumber = default(double?))
         {
             this.Description = Description;
             this.Complement = Complement;
             this.PostalCode = PostalCode;
+            this.LatitudeNumber = LatitudeNumber;
+            this.LongitudeNumber = LongitudeNumber;
         }
         
         /// <summary>
@@ -58,6 +62,16 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         [DataMember(Name="PostalCode", EmitDefaultValue=false)]
         public string PostalCode { get; set; }
         /// <summary>
+        /// Gets or Sets LatitudeNumber
+        /// </summary>
+        [DataMember(Name="LatitudeNumber", EmitDefaultValue=false)]
+        public double? LatitudeNumber { get; set; }
+        /// <summary>
+        /// Gets or Sets LongitudeNumber
+        /// </summary>
+        [DataMember(Name="LongitudeNumber", EmitDefaultValue=false)]
+        public double? LongitudeNumber { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -68,6 +82,8 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Complement: ").Append(Complement).Append("\n");
             sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
+            sb.Append("  LatitudeNumber: ").Append(LatitudeNumber).Append("\n");
+            sb.Append("  LongitudeNumber: ").Append(LongitudeNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -118,6 +134,16 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     this.PostalCode == other.PostalCode ||
                     this.PostalCode != null &&
                     this.PostalCode.Equals(other.PostalCode)
+                ) && 
+                (
+                    this.LatitudeNumber == other.LatitudeNumber ||
+                    this.LatitudeNumber != null &&
+                    this.LatitudeNumber.Equals(other.LatitudeNumber)
+                ) && 
+                (
+                    this.LongitudeNumber == other.LongitudeNumber ||
+                    this.LongitudeNumber != null &&
+                    this.LongitudeNumber.Equals(other.LongitudeNumber)
                 );
         }
 
@@ -138,6 +164,10 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     hash = hash * 59 + this.Complement.GetHashCode();
                 if (this.PostalCode != null)
                     hash = hash * 59 + this.PostalCode.GetHashCode();
+                if (this.LatitudeNumber != null)
+                    hash = hash * 59 + this.LatitudeNumber.GetHashCode();
+                if (this.LongitudeNumber != null)
+                    hash = hash * 59 + this.LongitudeNumber.GetHashCode();
                 return hash;
             }
         }
