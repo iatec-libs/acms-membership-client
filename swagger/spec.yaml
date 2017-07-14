@@ -65,7 +65,7 @@ definitions:
       Name:
         type: string
       ParentEntity:
-        $ref: '#/definitions/ParentEntity'
+        $ref: '#/definitions/Entity'
       MainPicture:
         $ref: '#/definitions/Picture'
       ChurchType:
@@ -102,7 +102,7 @@ definitions:
           $ref: '#/definitions/ServiceTime'
       StreetAddress:
         $ref: '#/definitions/Address'
-  ParentEntity:
+  Entity:
     type: object
     properties:
       Name:
@@ -112,6 +112,8 @@ definitions:
       Id:
         type: string
         format: uuid
+      Code:
+        type: string
   Culture:
     type: object
     properties:
@@ -159,6 +161,9 @@ definitions:
         type: string
       IsMainPastor:
         type: boolean
+      AccountsId:
+        type: string
+        format: uuid
   Picture:
     type: object
     properties:

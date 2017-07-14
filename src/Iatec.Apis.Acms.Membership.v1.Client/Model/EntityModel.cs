@@ -24,22 +24,24 @@ using System.ComponentModel.DataAnnotations;
 namespace Iatec.Apis.Acms.Membership.v1.Client.Model
 {
     /// <summary>
-    /// ParentEntityModel
+    /// EntityModel
     /// </summary>
     [DataContract]
-    public partial class ParentEntityModel :  IEquatable<ParentEntityModel>, IValidatableObject
+    public partial class EntityModel :  IEquatable<EntityModel>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ParentEntityModel" /> class.
+        /// Initializes a new instance of the <see cref="EntityModel" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Abbreviation">Abbreviation.</param>
         /// <param name="Id">Id.</param>
-        public ParentEntityModel(string Name = default(string), string Abbreviation = default(string), Guid? Id = default(Guid?))
+        /// <param name="Code">Code.</param>
+        public EntityModel(string Name = default(string), string Abbreviation = default(string), Guid? Id = default(Guid?), string Code = default(string))
         {
             this.Name = Name;
             this.Abbreviation = Abbreviation;
             this.Id = Id;
+            this.Code = Code;
         }
         
         /// <summary>
@@ -58,16 +60,22 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public Guid? Id { get; set; }
         /// <summary>
+        /// Gets or Sets Code
+        /// </summary>
+        [DataMember(Name="Code", EmitDefaultValue=false)]
+        public string Code { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ParentEntityModel {\n");
+            sb.Append("class EntityModel {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Abbreviation: ").Append(Abbreviation).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,15 +97,15 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ParentEntityModel);
+            return this.Equals(obj as EntityModel);
         }
 
         /// <summary>
-        /// Returns true if ParentEntityModel instances are equal
+        /// Returns true if EntityModel instances are equal
         /// </summary>
-        /// <param name="other">Instance of ParentEntityModel to be compared</param>
+        /// <param name="other">Instance of EntityModel to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ParentEntityModel other)
+        public bool Equals(EntityModel other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -118,6 +126,11 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.Code == other.Code ||
+                    this.Code != null &&
+                    this.Code.Equals(other.Code)
                 );
         }
 
@@ -138,6 +151,8 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     hash = hash * 59 + this.Abbreviation.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Code != null)
+                    hash = hash * 59 + this.Code.GetHashCode();
                 return hash;
             }
         }

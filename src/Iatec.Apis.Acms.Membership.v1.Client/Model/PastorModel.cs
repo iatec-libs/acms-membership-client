@@ -41,7 +41,8 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="MobilePhone">MobilePhone.</param>
         /// <param name="Email">Email.</param>
         /// <param name="IsMainPastor">IsMainPastor.</param>
-        public PastorModel(Guid? Id = default(Guid?), string Name = default(string), string LastName = default(string), string FullName = default(string), PictureModel MainPicture = default(PictureModel), string HomePhone = default(string), string MobilePhone = default(string), string Email = default(string), bool? IsMainPastor = default(bool?))
+        /// <param name="AccountsId">AccountsId.</param>
+        public PastorModel(Guid? Id = default(Guid?), string Name = default(string), string LastName = default(string), string FullName = default(string), PictureModel MainPicture = default(PictureModel), string HomePhone = default(string), string MobilePhone = default(string), string Email = default(string), bool? IsMainPastor = default(bool?), Guid? AccountsId = default(Guid?))
         {
             this.Id = Id;
             this.Name = Name;
@@ -52,6 +53,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
             this.MobilePhone = MobilePhone;
             this.Email = Email;
             this.IsMainPastor = IsMainPastor;
+            this.AccountsId = AccountsId;
         }
         
         /// <summary>
@@ -100,6 +102,11 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         [DataMember(Name="IsMainPastor", EmitDefaultValue=false)]
         public bool? IsMainPastor { get; set; }
         /// <summary>
+        /// Gets or Sets AccountsId
+        /// </summary>
+        [DataMember(Name="AccountsId", EmitDefaultValue=false)]
+        public Guid? AccountsId { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -116,6 +123,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
             sb.Append("  MobilePhone: ").Append(MobilePhone).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  IsMainPastor: ").Append(IsMainPastor).Append("\n");
+            sb.Append("  AccountsId: ").Append(AccountsId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -196,6 +204,11 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     this.IsMainPastor == other.IsMainPastor ||
                     this.IsMainPastor != null &&
                     this.IsMainPastor.Equals(other.IsMainPastor)
+                ) && 
+                (
+                    this.AccountsId == other.AccountsId ||
+                    this.AccountsId != null &&
+                    this.AccountsId.Equals(other.AccountsId)
                 );
         }
 
@@ -228,6 +241,8 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
                     hash = hash * 59 + this.Email.GetHashCode();
                 if (this.IsMainPastor != null)
                     hash = hash * 59 + this.IsMainPastor.GetHashCode();
+                if (this.AccountsId != null)
+                    hash = hash * 59 + this.AccountsId.GetHashCode();
                 return hash;
             }
         }

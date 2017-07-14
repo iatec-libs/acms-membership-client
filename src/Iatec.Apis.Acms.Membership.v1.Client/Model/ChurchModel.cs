@@ -50,7 +50,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// <param name="Features">Features.</param>
         /// <param name="ServiceTimes">ServiceTimes.</param>
         /// <param name="StreetAddress">StreetAddress.</param>
-        public ChurchModel(Guid? Id = default(Guid?), int? Code = default(int?), string Name = default(string), ParentEntityModel ParentEntity = default(ParentEntityModel), PictureModel MainPicture = default(PictureModel), int? ChurchType = default(int?), CultureModel Culture = default(CultureModel), Guid? DistrictId = default(Guid?), int? DistrictCode = default(int?), Guid? RegionId = default(Guid?), int? RegionCode = default(int?), AddressModel MailingAddress = default(AddressModel), bool? Active = default(bool?), int? MembersAmount = default(int?), List<PastorModel> Pastors = default(List<PastorModel>), List<FeatureModel> Features = default(List<FeatureModel>), List<ServiceTimeModel> ServiceTimes = default(List<ServiceTimeModel>), AddressModel StreetAddress = default(AddressModel))
+        public ChurchModel(Guid? Id = default(Guid?), int? Code = default(int?), string Name = default(string), EntityModel ParentEntity = default(EntityModel), PictureModel MainPicture = default(PictureModel), int? ChurchType = default(int?), CultureModel Culture = default(CultureModel), Guid? DistrictId = default(Guid?), int? DistrictCode = default(int?), Guid? RegionId = default(Guid?), int? RegionCode = default(int?), AddressModel MailingAddress = default(AddressModel), bool? Active = default(bool?), int? MembersAmount = default(int?), List<PastorModel> Pastors = default(List<PastorModel>), List<FeatureModel> Features = default(List<FeatureModel>), List<ServiceTimeModel> ServiceTimes = default(List<ServiceTimeModel>), AddressModel StreetAddress = default(AddressModel))
         {
             this.Id = Id;
             this.Code = Code;
@@ -91,7 +91,7 @@ namespace Iatec.Apis.Acms.Membership.v1.Client.Model
         /// Gets or Sets ParentEntity
         /// </summary>
         [DataMember(Name="ParentEntity", EmitDefaultValue=false)]
-        public ParentEntityModel ParentEntity { get; set; }
+        public EntityModel ParentEntity { get; set; }
         /// <summary>
         /// Gets or Sets MainPicture
         /// </summary>

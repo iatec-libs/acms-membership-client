@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **Guid?** |  | [optional] 
 **Code** | **int?** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**ParentEntity** | [**ParentEntityModel**](ParentEntityModel.md) |  | [optional] 
+**ParentEntity** | [**EntityModel**](EntityModel.md) |  | [optional] 
 **MainPicture** | [**PictureModel**](PictureModel.md) |  | [optional] 
 **ChurchType** | **int?** |  | [optional] 
 **Culture** | [**CultureModel**](CultureModel.md) |  | [optional] 
